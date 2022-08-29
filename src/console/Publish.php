@@ -18,34 +18,12 @@ class Publish extends Command
     public function execute(Input $input, Output $output)
     {
         //获取默认配置文件
-        $resources = __DIR__ . '/../../resources';
-        $this->xCopy($resources, root_path('resources'));
+        $path = root_path('resources');
+        if (is_file($path) === false) {
+            @mkdir($path, 0755, true);
+            copy(__DIR__ . '/../../resources/geoip.mmdb', $path.'/geoip.mmdb');
+        }
         $output->writeln('publish ok');
-    }
-
-    public function xCopy($source, $destination, $child = 1)
-    {
-        if (!is_dir($source)) {
-            echo("Error:the $source is not a direction!");
-            return 0;
-        }
-        if (!is_dir($destination)) {
-            if (!mkdir($destination, 0777) && !is_dir($destination)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $destination));
-            }
-        }
-        $handle = dir($source);
-        while ($entry = $handle->read()) {
-            if (($entry !== ".") && ($entry !== "..")) {
-                if (is_dir($source . "/" . $entry)) {
-                    if ($child) {
-                        $this->xCopy($source . "/" . $entry, $destination . "/" . $entry, $child);
-                    }
-                } else {
-                    copy($source . "/" . $entry, $destination . "/" . $entry);
-                }
-            }
-        }
     }
 
 }
