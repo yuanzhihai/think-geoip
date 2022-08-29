@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\GeoIp\console;
+namespace yzh52521\GeoIP\console;
 
 use think\console\Command;
 use think\console\Input;

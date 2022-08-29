@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\GeoIp;
+namespace yzh52521\GeoIP;
 
 use think\Service;
 

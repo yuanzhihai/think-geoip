@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\GeoIp\support;
+namespace yzh52521\GeoIP\support;
 
 use think\helper\Arr;
 

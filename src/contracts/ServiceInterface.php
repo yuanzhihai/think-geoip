@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\GeoIp\contracts;
+namespace yzh52521\GeoIP\contracts;
 
 interface ServiceInterface
 {

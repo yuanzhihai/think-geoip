@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\GeoIp\facades;
+namespace yzh52521\GeoIP\facades;
 
 use think\Facade;
 

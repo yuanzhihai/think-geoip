@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\GeoIp\services;
+namespace yzh52521\GeoIP\services;
 
 use Exception;
 use GeoIp2\Database\Reader;

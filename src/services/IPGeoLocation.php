@@ -1,9 +1,9 @@
 <?php
 
-namespace yzh52521\GeoIp\services;
+namespace yzh52521\GeoIP\services;
 
 use Exception;
-use yzh52521\GeoIp\support\HttpClient;
+use yzh52521\GeoIP\support\HttpClient;
 
 class IPGeoLocation extends AbstractService
 {
