@@ -36,7 +36,7 @@
   "extra": {
     "think": {
       "config": {
-        "geoip": "src/config/geoip.php"
+        "geoip": "config/geoip.php"
       },
       "services": [
         "yzh52521\\GeoIP\\GeoIPService"
