@@ -1,0 +1,46 @@
+{
+  "name": "yzh52521/think-geoip",
+  "description": "Support for multiple GeoIP services.",
+  "keywords": [
+    "thinkphp",
+    "geoip",
+    "location",
+    "geolocation",
+    "MaxMind",
+    "IP API",
+    "infoDB"
+  ],
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "yuanzhihai",
+      "email": "396751927@qq.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "topthink/framework": "^6.0"
+  },
+  "require-dev": {
+    "monolog/monolog": "^2.8",
+    "geoip2/geoip2": "~2.1"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "yzh52521\\GeoIP\\": "src/"
+    }
+  },
+  "extra": {
+    "think": {
+      "config": {
+        "geoip": "src/config/geoip.php"
+      },
+      "services": [
+        "yzh52521\\GeoIP\\GeoIPService"
+      ]
+    }
+  }
+}
