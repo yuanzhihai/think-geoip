@@ -21,7 +21,7 @@ class Clear extends Command
     protected function execute(Input $input, Output $output)
     {
         if ($this->isSupported() === false) {
-            $this->output->write('Default cache system does not support tags');
+            $this->output->writeln('Default cache system does not support tags');
         }
 
         $this->performFlush();
