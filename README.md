@@ -1,6 +1,27 @@
 # think-geoip
 Determine the geographical location of website visitors based on their IP addresses
 
+# install
+```
+composer require yzh52521/geoip
+``` 
+Configuration
+Quick breakdown of the two main options in the configuration file. To find out more simple open the config/geoip.php file.
+
+Service Configuration
+To simplify and keep things clean, all third party composer packages, that are needed for a service, are installed separately.
+
+For further configuration options checkout the services page.
+
+Caching Configuration
+GeoIP uses think default caching to store queried IP locations. This is done to reduce the number of calls made to the selected service, as some of them are rate limited.
+
+Options:
+
+all all location are cached
+some cache only the requesting user
+none caching is completely disable
+
 # 基本用法
 > The simplest way to use these method is through the helper function geoip() or by using the facade \yzh52521\GeoIP\facades\GeoIP. For the examples below we will use the helper method.
 
