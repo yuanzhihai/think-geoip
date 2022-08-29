@@ -77,14 +77,13 @@ class GeoIP
      *
      * @param array $config
      */
-    public function __construct(array $config, Cache $cache)
+    public function __construct(array $config,\think\Cache $cache)
     {
         $this->config = $config;
 
         // Create caching instance
         $this->cache = new Cache(
             $cache,
-            $this->config('cache_tags'),
             $this->config('cache_expires', 30)
         );
 

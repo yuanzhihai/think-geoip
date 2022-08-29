@@ -8,12 +8,13 @@ class GeoIPService extends Service
 {
     public function register()
     {
-        $this->app->bind('geoip', function ($app) {
+        $this->app->bind('geoip', function () {
             return new GeoIP(
-                $app->config->get('geoip', []),
-                $app['cache']
+                config('geoip', []),
+                $this->app->cache
             );
         });
+
     }
 
     public function boot()

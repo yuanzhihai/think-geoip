@@ -16,8 +16,7 @@ class Update extends Command
     protected function execute(Input $input, Output $output)
     {
         // Get default service
-        $service = app('geoip')->getService();
-
+        $service= app('geoip')->getService();
         // Ensure the selected service supports updating
         if (method_exists($service, 'update') === false) {
             $this->output->info('The current service "' . get_class($service) . '" does not support updating.');

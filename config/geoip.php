@@ -52,7 +52,7 @@ return [
 
         'maxmind_database' => [
             'class'         => \yzh52521\GeoIP\Services\MaxMindDatabase::class,
-            'database_path' => runtime_path('geoip/geoip.mmdb'),
+            'database_path' => runtime_path('geoip').'geoip.mmdb',
             'update_url'    => sprintf('https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=%s&suffix=tar.gz', env('MAXMIND_LICENSE_KEY')),
             'locales'       => ['en'],
         ],
@@ -68,7 +68,7 @@ return [
             'class'          => \yzh52521\GeoIP\Services\IPApi::class,
             'secure'         => true,
             'key'            => env('IPAPI_KEY'),
-            'continent_path' => runtime_path('geoip/continents.json'),
+            'continent_path' => runtime_path('geoip').'continents.json',
             'lang'           => 'en',
         ],
 
@@ -76,7 +76,7 @@ return [
             'class'          => \yzh52521\GeoIP\Services\IPGeoLocation::class,
             'secure'         => true,
             'key'            => env('IPGEOLOCATION_KEY'),
-            'continent_path' => runtime_path('geoip/continents.json'),
+            'continent_path' => runtime_path('geoip').'continents.json',
             'lang'           => 'en',
         ],
 

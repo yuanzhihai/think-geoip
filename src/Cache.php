@@ -21,13 +21,13 @@ class Cache
     /**
      * Create a new cache instance.
      *
-     * @param \think\Cache $cache
+     * @param $cache
      * @param array $tags
      * @param int $expires
      */
-    public function __construct(Cache $cache, $tags, $expires = 30)
+    public function __construct(\think\Cache $cache,  $expires = 30)
     {
-        $this->cache   = $tags ? $cache->tag($tags) : $cache;
+        $this->cache   = $cache;
         $this->expires = $expires;
     }
 
