@@ -45,7 +45,7 @@ class Clear extends Command
      */
     protected function performFlush()
     {
-        $this->output->write("Clearing cache...");
+        $this->output->writeln("Clearing cache...");
 
         app('geoip')->getCache()->clear();
 
