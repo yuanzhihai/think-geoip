@@ -118,8 +118,8 @@ Example service
 namespace App\GeoIP\Services;
 
 use Exception;
-use Torann\GeoIP\Support\HttpClient;
-use Torann\GeoIP\Services\AbstractService;
+use yzh52521\GeoIP\support\HttpClient;
+use yzh52521\GeoIP\services\AbstractService;
 
 class FooBar extends AbstractService
 {
