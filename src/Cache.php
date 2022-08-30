@@ -18,6 +18,12 @@ class Cache
      */
     protected $expires;
 
+    /**
+     * cache tag
+     * @var array
+     */
+    protected $tags;
+
 
     /**
      * Create a new cache instance.
@@ -28,8 +34,9 @@ class Cache
      */
     public function __construct(\think\Cache $cache, $tags, $expires = 30)
     {
-        $this->cache = $tags ? $cache->tag($tags) : $cache;
+        $this->cache   = $cache;
         $this->expires = $expires;
+        $this->tags    = $tags;
     }
 
     /**
@@ -58,7 +65,7 @@ class Cache
      */
     public function set($name, Location $location)
     {
-        return $this->cache->set($name, $location->toArray(), $this->expires);
+        return $this->cache->tag($this->tags)->set($name, $location->toArray(), $this->expires);
     }
 
     /**
@@ -68,6 +75,6 @@ class Cache
      */
     public function clear()
     {
-        return $this->cache->clear();
+        return $this->cache->tag($this->tags)->clear();
     }
 }
