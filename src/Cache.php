@@ -18,6 +18,7 @@ class Cache
      */
     protected $expires;
 
+
     /**
      * Create a new cache instance.
      *
@@ -25,9 +26,9 @@ class Cache
      * @param array $tags
      * @param int $expires
      */
-    public function __construct(\think\Cache $cache,  $expires = 30)
+    public function __construct(\think\Cache $cache, $tags, $expires = 30)
     {
-        $this->cache   = $cache;
+        $this->cache = $tags ? $cache->tag($tags) : $cache;
         $this->expires = $expires;
     }
 

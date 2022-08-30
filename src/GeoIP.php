@@ -84,6 +84,7 @@ class GeoIP
         // Create caching instance
         $this->cache = new Cache(
             $cache,
+            $this->config('cache_tags'),
             $this->config('cache_expires', 30)
         );
 
