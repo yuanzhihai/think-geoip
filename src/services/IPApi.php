@@ -32,7 +32,7 @@ class IPApi extends AbstractService
         $base = [
             'base_uri' => 'http://ip-api.com/',
             'headers'  => [
-                'User-Agent' => 'Laravel-GeoIP',
+                'User-Agent' => 'Think-GeoIP',
             ],
             'query'    => [
                 'fields' => 49663,
