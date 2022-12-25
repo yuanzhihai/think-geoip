@@ -3,7 +3,7 @@ Determine the geographical location of website visitors based on their IP addres
 
 # install
 ```
-composer require yzh52521/geoip
+composer require yzh52521/think-geoip
 ``` 
 Configuration
 Quick breakdown of the two main options in the configuration file. To find out more simple open the config/geoip.php file.
