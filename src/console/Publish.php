@@ -20,7 +20,6 @@ class Publish extends Command
         //获取默认配置文件
         $path = app( 'geoip' )->config( 'services.maxmind_database.database_path' );
         if (is_file($path) === false) {
-            @mkdir($path, 0755, true);
             copy(__DIR__ . '/../../resources/geoip.mmdb', $path);
         }
         $output->writeln('publish ok');
